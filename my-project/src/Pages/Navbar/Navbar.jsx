@@ -1,4 +1,5 @@
-import { Box,HStack,Image, Menu, MenuButton, MenuList,MenuItem, Button, Container, Link,} from '@chakra-ui/react'
+import { Box,HStack,Image, Menu, MenuButton, MenuList,MenuItem, Button, Container} from '@chakra-ui/react'
+import { Link } from 'react-router-dom';
 
 function Navbar(){
     const hoverStyle={
@@ -7,6 +8,7 @@ function Navbar(){
     }
 
     return(
+        <>
         <Container maxW='100%' h="100px"
          display="flex" alignItems='center' justifyContent="space-around">
 
@@ -26,14 +28,15 @@ function Navbar(){
                             </MenuList>
                         </Menu>
                     </Box>
-                    <Box _hover={hoverStyle}><Link to="/support">Support</Link></Box>
+                    <Box _hover={hoverStyle}><Link to="/support"> Support</Link></Box>
                     <Box _hover={hoverStyle}><Link to="/blog">Blog</Link></Box>
                     <Box _hover={hoverStyle}><Link to="/forums">Forums</Link></Box>
-                    <Box _hover={hoverStyle}> <Link to="about">About</Link></Box>
-                    <Box _hover={hoverStyle}><Button w="120px" bg="White" border="1.5px solid #ff763f" color="#ff763f">Log In</Button></Box>
+                    <Box _hover={hoverStyle}> <Link to="/about">About</Link></Box>
+                   <Link to="/login"> <Box _hover={hoverStyle}><Button w="120px" bg="White" border="1.5px solid #ff763f" color="#ff763f">Log In</Button></Box> </Link>
                 </HStack>
             </Box>
         </Container>
+        </>
     )
 
 }
