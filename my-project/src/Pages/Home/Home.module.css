@@ -1,0 +1,341 @@
+.main{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.main img{
+    width: 450px;
+}
+.main>div+div{
+    width: 400px;
+}
+
+.main h1{
+    font-size: 3em;
+    line-height: 1.1em;
+    font-weight: 700;
+    color: #4f4e53;
+    text-align: left;
+}
+
+.main p{
+    text-align: left;
+    color: #4f4e53;
+    font-size: 1.76em;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.main>div:last-child>p:last-child{
+    font-size: 1.125em;
+    line-height: 1.5em;
+    color: #404040;
+}
+
+.main button{
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 40%);
+    color: #fff;
+    background-color: #ff763f;
+    padding: 7% 13%;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    font-weight: 600;
+    letter-spacing: 0px;
+    margin-top: 20px;
+    margin-right: 150px;
+}
+
+
+
+.thrImg{
+    width: 65%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.thrImg img{
+    width: 180px;
+}
+
+.socialImg{
+    display: flex;
+    gap: 20px;
+    width: 30%;
+    margin: auto;
+}
+
+.socialImg img{
+    width: 200px;
+}
+
+.Discover{
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.Discover h1{
+    font-weight: 700;
+    Color: #4f4e53;
+    font-size: 2.2em;
+    line-height: 1.25em;
+}
+
+.Discover h5{
+    width: 480px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #4f4e53;
+    font-size: 1.41em;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.nutritionData{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 85%;
+    margin: auto;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.nutritionData>div{
+    width: 300px;
+}
+
+
+.nutritionData img{
+    width: 100px;
+    margin: auto;
+}
+
+.nutritionData h2{
+    margin-top: 30px;
+    font-weight: 600;
+    color: #4f4e53;
+    font-size: 1.41em;
+    line-height: 1.5em;
+}
+
+.nutritionData p{
+    color: #404040;
+    font-size: 1.125em;
+    line-height: 1.5em;
+    margin-top: 30px;
+}
+
+.Develop{
+    width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.Develop h1{
+    color: #4f4e53;
+    font-size: 2.2em;
+    line-height: 1.25em;
+    font-weight: 600;
+}
+
+.Develop p{
+    color: #4f4e53;
+    font-size: 1.41em;
+    line-height: 1.5em;
+    font-weight: 400;
+    width: 500px;
+    margin: auto;
+}
+
+.Track{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    align-items: baseline;
+}
+
+
+.Track h1{
+    color: #4f4e53;
+    width: 240px;
+    margin: auto;
+    font-size: 1.41em;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+
+.Track h5{
+    color: #404040;
+    font-size: 1.125em;
+    line-height: 1.5em;
+    width: 300px;
+    margin: auto;
+}
+
+.Track img{
+    margin: auto;
+    width: 100px;
+}
+
+.find{
+    margin-top: 50px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background-color: #f8f8f8
+}
+
+.find h1{
+    width: 600px;
+    margin: auto;
+    color: #4f4e53;
+    font-size: 1.76em;
+    line-height: 1.5em;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.sync{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+.sync h1{
+    color: #4f4e53;
+    font-size: 2.2em;
+    line-height: 1.25em;
+    font-weight: 500;
+}
+
+.sync p{
+    margin-top: 30px;
+    color: #4f4e53;
+    font-size: 1.41em;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.nineImg{
+    width: 65%;
+    margin: auto;
+    margin-top: 30px
+}
+
+.nineImg img{
+    width: 900px;
+}
+
+.hrTag{
+    border: 1px solid #b6b6b6;
+    width: 85%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.reviewTxt h1{
+    color: #4f4e53;
+    font-size: 2.5em;
+    line-height: 1.25em;
+    font-weight: 700;
+}
+
+.reviewTxt p{
+    color: #4f4e53;
+    font-size: 1.41em;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.bgImg{
+    background-image: url("https://cdn1.cronometer.com/2021/landing/quote-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 50px;
+}
+
+.learn{
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    margin-top: 50px;
+    background-color: #f8f8f8;
+    padding: 5%;
+}
+
+.learn h1{
+    color: #4f4e53;
+    font-size: 1.41em;
+    line-height: 1.5em;
+    font-weight: 600;
+}
+
+.learn p{
+    color: #4f4e53;
+    font-size: 1.41em;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.learn>div:last-child{
+    width: 500px;
+    
+}
+
+.learn>div:last-child>img{
+     margin: auto;
+     margin-bottom: 30px;
+}
+
+.canadian h1{
+    margin-top: 50px;
+    font-weight: 700;
+    color: #4f4e53;
+    font-size: 2.2em;
+    line-height: 1.25em;
+}
+
+.canadian p{
+    color: #4f4e53;
+    font-size: 1.41em;
+    line-height: 1.5em;
+    font-weight: 400;
+    width: 540px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.headquarters{
+    color: #404040;
+    font-size: 1.125em;
+    line-height: 1.5em;
+    width: 820px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+.help{
+    color: #4f4e53;
+    font-size: 1.41em;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
