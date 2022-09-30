@@ -13,7 +13,7 @@ function Navbar(){
          display="flex" alignItems='center' justifyContent="space-around">
 
             <Box >
-                <Image w="250px" src="https://cdn1.cronometer.com/2021/landing/cronometer-logo.svg" alt="logo"/>
+                <Link to="/"><Image w="250px" src="https://cdn1.cronometer.com/2021/landing/cronometer-logo.svg" alt="logo"/></Link>
             </Box>
             <Box>
                 <HStack display="flex" gap="8">
