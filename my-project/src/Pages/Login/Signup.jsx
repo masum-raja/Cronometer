@@ -86,10 +86,9 @@ useEffect(() => {
             title: 'Account created.',
             description: "We've created your account for you.",
             status: 'success',
-            duration: 9000,
+            duration: 2000,
             isClosable: true,
           })}
-
           setIsAuth(!isAuth)
         // {<ToastExample />}
 

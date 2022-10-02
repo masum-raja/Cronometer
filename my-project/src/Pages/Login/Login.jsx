@@ -37,16 +37,22 @@ let res;
     
 
     if(flag){
+        return(
+            <>
         {toast({
             title: 'Successfull login.',
             // description: "We've created your account for you.",
             status: 'success',
-            duration: 9000,
+            duration: 2000,
             isClosable: true,
           })}
-          <Navigate to="/dashBoard"/>
+
+          <Navigate to="/dashboard"/>
+          </>
+        )
     }
 
+    console.log(flag)
     return(
         <>
         <Container maxW="100%" m="auto">
