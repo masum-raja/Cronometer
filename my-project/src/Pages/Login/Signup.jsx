@@ -1,8 +1,10 @@
-import {Box, Button, Checkbox, Container,Image, Input, Stack,Text} from "@chakra-ui/react"
-import { Link } from "react-router-dom";
+import {Box, Button, Checkbox, Container,Image, Input, Stack,Text, useToast} from "@chakra-ui/react"
+import { Link, Navigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Checkbox2 from "./Checkbox";
 import { Catalogues } from "./mock";
+import ToastExample from "./Success";
+
 
 
 let initState={
@@ -26,6 +28,8 @@ function Signup(){
     const [isCheck, setIsCheck] = useState([]);
     const [list, setList] = useState([]);
     const[formData , setFormData]=useState(initState);
+    const toast=useToast()
+    const [isAuth,setIsAuth]=useState(false)
 
 
 // .....Checked.........
@@ -71,13 +75,33 @@ useEffect(() => {
 
 
     const handleChange=(e)=>{
-        let value=e.target.value;
+        let value=e.target.type==="checked"?e.target.checked:e.target.value;
         setFormData({...formData,[e.target.name]:value})
     }
 
     const handleSubmit=()=>{
         console.log(formData)
+        localStorage.setItem("data",JSON.stringify(formData))
+        {toast({
+            title: 'Account created.',
+            description: "We've created your account for you.",
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+          })}
+
+          setIsAuth(!isAuth)
+        // {<ToastExample />}
+
     }
+
+    if(isAuth){
+
+        return (
+            <Navigate to="/login" />
+        )
+      }
+    
 
     return (
         <>
@@ -102,8 +126,8 @@ useEffect(() => {
         <Box  maxW="500px" m="auto" mt="40px" p="50px" border="1px solid #eee" borderRadius="10px" bg="#fefefe" >
             <Text mb="10px" color="#333" fontWeight="bold" fontSize="1.5em" >Your Body Type</Text>
             <label>Sex: 
-                <Checkbox  ml="10px" colorScheme='red' border="#FF763F" value="male"  onChange={handleChange} >Male</Checkbox>
-                <Checkbox ml="10px" border="#FF763F" colorScheme='red' value='female' onChange={handleChange}>Female</Checkbox>
+                <Checkbox  ml="10px" colorScheme='red' border="#FF763F" name="male" value={"male"}   onChange={handleChange} >Male</Checkbox>
+                <Checkbox ml="10px" border="#FF763F" colorScheme='red' name="female" value={"female"} onChange={handleChange}>Female</Checkbox>
             </label>
             <br />
             <label>Born: 
@@ -194,6 +218,3 @@ useEffect(() => {
 }
 
 export default Signup;
-
-
-

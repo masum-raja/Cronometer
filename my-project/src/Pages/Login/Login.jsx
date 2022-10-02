@@ -1,6 +1,6 @@
-import {Box, Button, Container, Image,Input, Stack,Text} from "@chakra-ui/react"
+import {Box, Button, Container, Image,Input, Stack,Text ,useToast} from "@chakra-ui/react"
 import { useState } from "react";
-import {Link} from "react-router-dom"
+import {Link, Navigate} from "react-router-dom"
 import Footer from "../Footer/Footer";
 
 
@@ -9,16 +9,42 @@ let initState={
     password:"",
 }
 
+let data= JSON.parse(localStorage.getItem("data"))
+
 function Login(){
     const [formData,setFormData]=useState(initState)
+    let [flag,setFlag]=useState(false)
+    const toast = useToast()
+
 
     const handleChange=(e)=>{
         let value=e.target.value;
         setFormData({...formData,[e.target.name]:value})
     }
 
+
+let res;
     const handleSubmit=()=>{
-        console.log(formData)
+        // console.log(formData.email)
+    res = formData.email==data.email && formData.password==data.password ?!flag:flag
+    setFlag(res);
+    if(res===false){
+        alert("authentication failed")
+    }
+
+    } 
+
+    
+
+    if(flag){
+        {toast({
+            title: 'Successfull login.',
+            // description: "We've created your account for you.",
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+          })}
+          <Navigate to="/dashBoard"/>
     }
 
     return(

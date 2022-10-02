@@ -2,12 +2,12 @@
     width: 80%;
     margin: auto;
     display: flex;
-    gap: 50px;
+    gap: 90px;
     margin-top: 30px;
 }
 
 .main img{
-    width: 450px;
+    width: 480px;
 }
 .main>div+div{
     width: 400px;
@@ -239,14 +239,6 @@
 
 .nineImg img{
     width: 900px;
-}
-
-.hrTag{
-    border: 1px solid #b6b6b6;
-    width: 85%;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 .reviewTxt h1{

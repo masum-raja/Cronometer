@@ -20,6 +20,7 @@ function Home(){
                         <Link to="./signup"><Button _hover="none">Sign up-It's Free!</Button></Link>
                         <p>Already have an account?<Link to="/login" fontWeight="500">Log in</Link></p>
                     </div>
+                    
                 </div>
 
                 <Box fontSize="24px" fontWeight="500" mt="20px">As Seen On</Box>
@@ -124,7 +125,8 @@ function Home(){
                     </div>
                 </div>
 
-                <hr className={Styles.hrTag} />
+                <Box w="85%" m="auto" mt="70px" mb="50px" borderTop="1px solid #b6b6b6">
+            </Box>
 
                 <div className={Styles.reviewTxt}>
                     <h1>Cronometer Reviews</h1>
@@ -187,7 +189,8 @@ function Home(){
                     <Button color="#ff763f" mt="50px" p="2% 6%" bg="#fff" boxShadow="1px 1px 10px 0 rgb(0 0 0 / 15%)" border="1px solid #ff763f" >About Us</Button>
                 </div>
 
-                <hr className={Styles.hrTag} />
+                <Box w="85%" m="auto" mt="70px" mb="50px" borderTop="1px solid #b6b6b6">
+            </Box>
 
                 <div className={Styles.help} >
                     <p>
