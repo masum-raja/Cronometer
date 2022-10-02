@@ -18,10 +18,6 @@ function DashBoard() {
     const [data,setData]=useState([])
     const [formData,setFormData]=useState(initialState);
 
-
- 
-
-
     const handleChange=(e)=>{
         let value=e.target.value;
         setFormData({...formData,[e.target.name]:value})
@@ -30,11 +26,17 @@ function DashBoard() {
       
 
       const handleSubmit=(e)=>{
-        e.preventDefault();
+        e.preventDefault()
         setData(formData);
-        // console.log(totalCaloricNeeds)
       }
 
+      let height = data.height
+      let weight= data.weight;
+      let gender= data.gender;
+      let age= data.age;
+
+      let res=gender==="male"?66.5+(13.75*weight)+(5.003*height)-(6.75*age):655.1+(9.563*weight)+(1.850*height)-(4.676*age)
+      res=res.toFixed(1)
      
 
 // const calculate = require('fitness-health-calculations');
@@ -46,19 +48,22 @@ function DashBoard() {
     return(
         <Box  maxW="100%">
              <DasNav/>
+             
                 <Box w="80%" m="auto" display="flex" justifyContent="space-between" >
                     <Box p="15px" h="200px"  boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px;" >
                         <Heading color="#E65F29" >Your Details</Heading>
                         <BMI/>
+                        <Box mt="10px" textAlign="left" fontWeight="600">Your Daily Calories:- {isNaN(res)?0:res} Kcal/day</Box>
                     </Box>
                     <Box>
 
                         <Heading color="#E65F29">Fitness and Health Calculations</Heading>
                     
                     <Box  w="80%" m="auto" mt="30px" boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;" p="20px">
-                    <Heading>User Form</Heading>
+                    <Heading>Calculating Your Daily Calories</Heading>
 
-                <FormControl onSubmit={handleSubmit}>
+                <form  onSubmit={handleSubmit} >
+                <FormControl>
                     <FormLabel mt="15px">Gender </FormLabel>
                     <Select name="gender" value={formData.gender} onChange={handleChange}>
                         <option>male</option>
@@ -89,10 +94,10 @@ function DashBoard() {
                         <option>maintain</option>
                         <option >gain</option>
                     </Select>
-
-                    <Button w="370px" mt="20px" bg="#e65f29" color="white" _hover="none" type="submit" onSubmit={handleSubmit}>SUBMIT</Button>
-
                     </FormControl>
+                    <Button w="370px" mt="20px" bg="#e65f29" color="white" _hover="none" type="submit"  >SUBMIT</Button>
+                    </form>
+                    
                             </Box>
                         </Box>
                 </Box>
